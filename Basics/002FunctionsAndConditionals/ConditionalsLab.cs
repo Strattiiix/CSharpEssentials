@@ -1,43 +1,45 @@
 using System;
-					
-public class Program
-{
-	public Operations myOperator;
-	
-	public void Main()
-	{
-		myOperator = new Operations();
-		
-		Console.WriteLine("Welcome");
-		myOperator.DoMath(10, 4);
-		myOperator.DoMath(20, 7);
-		myOperator.DoMath(30, 15);
-		myOperator.Compare(4,3);
-		myOperator.Compare(3,4);
-		myOperator.CheckPassword("SevenOF9");
-		myOperator.CheckPassword("OU812");
-	}
-}
 
-public class Operations {
-	public void DoMath (int value, int value2) {
-		var number = value + value2;
-		Console.WriteLine(number);
+public class Lab01b
+{
+    public void Main()
+	{
+		number(91);
+		compare(31);
 	}
-	
-	public void Compare (int value, int value2) {
-		if(value > value2) {
-			Console.WriteLine("True, the first greater.");
-		} else {
-			Console.WriteLine("False, the second is greater.");
+     public void number (int value) {
+		 var number = value;
+		if(value > 90)
+		{
+		 	Console.WriteLine("Your Grade is an A");
 		}
-	}
+		else if(number > 80)
+		{
+			Console.WriteLine("Your Grade is a B");
+		}
+		else if(number > 70)
+		{
+			Console.WriteLine("Your Grade is a C");
+		}
+		else if(number > 60)
+		{
+			Console.WriteLine("Your Grade is a D");
+		}
+		else if(number > 50)
+		{
+			Console.WriteLine("Your Grade is a F");
+		}
 	
-	public void CheckPassword (string password) {
-		if(password == "OU812") {
-			Console.WriteLine("Correct Password");
-		} else {
-			Console.WriteLine("Incorrect Password");	
+	 }
+	 public void compare (int value) {
+		 var number = value;
+		if(value > 30) 
+		{
+			Console.WriteLine("Make sure to stay hydrated and avoid staying in the sun for too long");
+		}
+      	if(value < 30)
+		{
+			Console.WriteLine("Today is a great day to be outside");
 		}
 	}
 }
